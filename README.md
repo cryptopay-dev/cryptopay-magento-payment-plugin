@@ -2,7 +2,7 @@
 
 This is the official Magento en for the CRYPTOPAY [cryptocurrency payment gateway](https://business.cryptopay.me/). Accept and settle payments in digital currencies in your Magento shop.
 
-This extension for Magento 2 implements the PHP REST API documented at https://developers.cryptopay.me/
+This extension for Magento 2 implements the REST API documented at https://developers.cryptopay.me/
 
 ## Requirements
 
