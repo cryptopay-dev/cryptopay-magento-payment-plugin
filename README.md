@@ -1,0 +1,1 @@
+# cryptopay-magento-payment-plugin
