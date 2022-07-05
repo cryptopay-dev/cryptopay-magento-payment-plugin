@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <cryptopay_paymentgateway>
+                <active>0</active>
+                <payment_action>true</payment_action>
+                <model>Cryptopay\PaymentGateway\Model\Payment\Cryptopaymethod</model>
+                <order_status>pending_payment</order_status><!-- set default order status-->
+                <environment>Sandbox</environment>
+                <widget_key></widget_key>
+                <callback_url></callback_url>
+                <callback_secret></callback_secret>
+                <title>Cryptopay</title>
+                <qr_code>0</qr_code>
+                <theme>light</theme>
+                <status_completed></status_completed>
+                <status_pending></status_pending>
+                <status_failed></status_failed>
+                <checkout_page_message>You will be redirected to the secure CRYPTOPAY checkout page.</checkout_page_message>
+            </cryptopay_paymentgateway>
+        </payment>
+    </default>
+</config>
