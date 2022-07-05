@@ -35,4 +35,5 @@ This extension for Magento 2 implements the PHP REST API documented at https://d
 Support and Feedback
 --------------------
 Magento 2.4.4
+
 Your feedback is appreciated! If you have specific problems or bugs with this Magento module, please file an issue on Github. For general feedback and support requests, send an email to service@cryptopay.com
