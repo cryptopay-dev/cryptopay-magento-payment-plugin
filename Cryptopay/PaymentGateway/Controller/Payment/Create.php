@@ -64,7 +64,7 @@ class Create implements ActionInterface
 
         $data['customId'] = 'magento_order_' . $customId;
         $data['widgetKey'] = $widgetKey;
-        $data['isShowQr'] = $showQrCode;
+        $data['isShowQr'] = $showQrCode == 1 ? 'true' : 'false';
         $data['theme'] = $theme;
         $data['priceCurrency'] = $orderCurrency;
         $data['priceAmount'] = $orderAmount;

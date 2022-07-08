@@ -36,17 +36,16 @@ class Webhook extends Action
     public function execute()
     {
         try {
+            $request = file_get_contents('php://input');
 
-            $body = $this->file->read('php://input');
-
-            if (!$this->validate_webhook($body, $_SERVER['HTTP_X_CRYPTOPAY_SIGNATURE'])) {
+            if (!$this->validateWebhook($request, $_SERVER['HTTP_X_CRYPTOPAY_SIGNATURE'])) {
                 $result = $this->jsonResultFactory->create();
                 $result->setHttpResponseCode(401);
                 $result->setData(['success' => false, 'message' => __('Webhook validation failed.')]);
                 return $result;
             }
 
-            $body = json_decode($body, true);
+            $body = json_decode($request, true);
 
             if ($body['type'] != 'Invoice') {
                 $result = $this->jsonResultFactory->create();
@@ -110,7 +109,7 @@ class Webhook extends Action
     /**
      * Validate the webhook request
      */
-    private function validate_webhook($body, $signature)
+    private function validateWebhook($body, $signature)
     {
         $callbackSecret = $this->scopeConfig->getValue(
             'payment/cryptopay_paymentgateway/callback_secret',
