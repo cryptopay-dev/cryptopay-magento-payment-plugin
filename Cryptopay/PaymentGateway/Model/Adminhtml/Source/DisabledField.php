@@ -31,7 +31,7 @@ class DisabledField extends \Magento\Config\Block\System\Config\Form\Field
     {
         $element->setDisabled('disabled');
 
-        $webhook = $this->urlBuilder->getBaseUrl() . 'cryptopay/payment/webhook';
+        $webhook = $this->urlBuilder->getBaseUrl() . 'rest/all/V1/order/status/update';
         $element->setValue($webhook);
 
         return $element->getElementHtml();

@@ -22,7 +22,7 @@ class Webhook extends Action
         File $file,
         JsonFactory $jsonResultFactory,
         ScopeConfigInterface $scopeConfig,
-        OrderRepositoryInterface $orderRepository,
+        OrderRepositoryInterface $orderRepository
     ) {
         parent::__construct($context);
         $this->file = $file;
