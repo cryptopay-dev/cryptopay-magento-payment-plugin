@@ -20,7 +20,7 @@
             "Cryptopay\\PaymentGateway\\": ""
         },
         "files": [
-            "registration.php"
+            "Cryptopay/PaymentGateway/registration.php"
         ]
     }
 }
