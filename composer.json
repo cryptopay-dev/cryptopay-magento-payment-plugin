@@ -7,7 +7,7 @@
         "cryptopay", "payment", "crypto", "cryptocurrencies", "bitcoin", "btc", "ethereum", "eth", "stellar lumens", "xlm", "litecoin", "ltc", "ripple", "xrp", "altcoin", "altcoins"
     ],
     "homepage": "https://cryptopay.me",
-    "license": "Apache 2.0",
+    "license": "OSL-3.0",
     "authors": [
         {
             "name": "CRYPTOPAY"
