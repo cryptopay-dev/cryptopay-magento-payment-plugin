@@ -16,7 +16,7 @@ class CallbackUrlComment implements \Magento\Config\Model\Config\CommentInterfac
 
     public function getCommentText($elementValue)
     {
-        $webhook = $this->urlInterface->getBaseUrl() . 'cryptopay/payment/webhook';
+        $webhook = $this->urlInterface->getBaseUrl() . 'rest/all/V1/order/status/update';
         $pointOne = '1. <a href="https://business.cryptopay.me" target="_blank">Log in</a> to your account on business.cryptopay.me';
         $pointTwo = __('2. Then go to <a href="https://business.cryptopay.me/app/settings/api" target="_blank"> the Settings -&gt; API page </a> and save %1 in the Callback URL field', $webhook);
         return "$pointOne <br/> $pointTwo";
