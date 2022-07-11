@@ -16,7 +16,6 @@ class Create implements ActionInterface
     private $scopeConfig;
     protected $urlBuilder;
     protected $widgetKey;
-    protected $callbackSecret;
 
     public function __construct(
         Session $checkoutSession,
@@ -29,7 +28,6 @@ class Create implements ActionInterface
         $this->urlBuilder = $urlBuilder;
         $this->scopeConfig = $scopeConfig;
         $this->widgetKey = $this->scopeConfig->getValue('payment/cryptopay_paymentgateway/widget_key', ScopeInterface::SCOPE_STORE);
-        $this->callbackSecret = $this->scopeConfig->getValue('payment/cryptopay_paymentgateway/callback_secret', ScopeInterface::SCOPE_STORE);
     }
 
     public function execute()
@@ -58,7 +56,6 @@ class Create implements ActionInterface
         $orderAmount = $order->getGrandTotal();
         $orderCurrency = $order->getOrderCurrencyCode();
         $widgetKey = $this->widgetKey;
-        $callbackSecret = $this->callbackSecret;
         $showQrCode = $this->scopeConfig->getValue('payment/cryptopay_paymentgateway/qr_code', ScopeInterface::SCOPE_STORE);
         $theme = $this->scopeConfig->getValue('payment/cryptopay_paymentgateway/theme', ScopeInterface::SCOPE_STORE);
 
@@ -68,7 +65,6 @@ class Create implements ActionInterface
         $data['theme'] = $theme;
         $data['priceCurrency'] = $orderCurrency;
         $data['priceAmount'] = $orderAmount;
-        $data['callbackSecret'] = $callbackSecret;
         $data['successRedirectUrl'] = $this->urlBuilder->getUrl(
             'cryptopay/payment/success',
             ['_query' => ['order_id' => $order->getId()]]
