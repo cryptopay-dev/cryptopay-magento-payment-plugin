@@ -1,26 +1,15 @@
 {
     "name": "cryptopay/paymentgateway",
-    "description": "CRYPTOPAY Enterprise Cryptocurrency Payment Processing for Magento 2",
+    "description": "Cryptopay Enterprise Cryptocurrency Payment Processing for Magento 2",
     "type": "magento2-module",
     "version": "1.0.0",
-    "keywords": [
-        "cryptopay", "payment", "crypto", "cryptocurrencies", "bitcoin", "btc", "ethereum", "eth", "stellar lumens", "xlm", "litecoin", "ltc", "ripple", "xrp", "altcoin", "altcoins"
-    ],
-    "homepage": "https://cryptopay.me",
     "license": "OSL-3.0",
-    "authors": [
-        {
-            "name": "CRYPTOPAY"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {},
     "autoload": {
-        "psr-4": {
-            "Cryptopay\\PaymentGateway\\": ""
-        },
         "files": [
             "registration.php"
-        ]
+        ],
+        "psr-4": {
+            "Cryptopay\\PaymentGateway\\": ""
+        }
     }
 }
